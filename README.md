@@ -70,3 +70,5 @@ Net Ckeck by HTTP , Please check the DNSlog
 为
 
 `url = "http://" + url;`
+
+默认把`请求文件`变成`请求目录`，可能导致无法获取到post内容
