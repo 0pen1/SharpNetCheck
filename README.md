@@ -8,28 +8,11 @@ Author: Uknow
 Github: https://github.com/uknowsec/SharpNetCheck
 
 Usage: SharpNetCheck -dns -host ceye.io
-       SharpNetCheck -http -host/ip ceye.io
-       SharpNetCheck -all -host ceye.io
+       SharpNetCheck -http ceye.io
+       SharpNetCheck -all ceye.io
 ```
 
-
-## Example
-
-`SharpNetCheck.exe -http -host xxxxx:38989/1112`
-
-```
-➜  /tmp nc -lvvp 38989
-Listening on [0.0.0.0] (family 0, port 38989)
-Connection from x.x.x.x 63858 received!
-POST /1112/ HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: x.x.x.x:38989
-Content-Length: 39
-Expect: 100-continue
-Connection: Keep-Alive
-
-host=DESKTOP-KUMLA9N&ip1=172.16.242.133
-```
+## ceye
 
 `SharpNetCheck -all -host xxx.ceye.io`
 
@@ -46,7 +29,7 @@ Data: host=DESKTOP-KUMLA9N&ip1=172.16.242.133
 ```
 
 
-## 搭建http 回显 服务器
+## 搭建http 回显 服务器 
 
 ```
 from flask import Flask, request
