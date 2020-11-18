@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
@@ -18,31 +18,32 @@ namespace SharpNetCheck
             System.Console.WriteLine("Author: Uknow");
             System.Console.WriteLine("Github: https://github.com/uknowsec/SharpNetCheck");
             System.Console.WriteLine("");
-            if (args.Length < 3)
+            if (args.Length < 2)
             {
                 System.Console.WriteLine("Usage: SharpNetCheck -dns -host ceye.io");
-                System.Console.WriteLine("       SharpNetCheck -http -host/ip ceye.io");
-                System.Console.WriteLine("       SharpNetCheck -all -host ceye.io");
+                System.Console.WriteLine("       SharpNetCheck -http ceye.io");
+                System.Console.WriteLine("       SharpNetCheck -all ceye.io");
             }
-            if (args.Length >= 3 && (args[0] == "-dns"))
+            if (args.Length >= 2 && (args[0] == "-dns"))
             {
                 Console.WriteLine();
-                dns(args[2]);
+                dns(args[1]);
                 Console.WriteLine("Net Ckeck by DNS , Please check the DNSlog");
                 Console.WriteLine();
             }
-            if (args.Length >= 3 && (args[0] == "-http"))
+            if (args.Length >= 2 && (args[0] == "-http"))
             {
+                
                 Console.WriteLine();
-                http(args[2]);
+                http(args[1]);
                 Console.WriteLine("Net Ckeck by HTTP , Please check the DNSlog");
                 Console.WriteLine();
             }
-            if (args.Length >= 3 && (args[0] == "-all"))
+            if (args.Length >= 2 && (args[0] == "-all"))
             {
                 Console.WriteLine();
-                http(args[2]);
-                dns(args[2]);
+                http(args[1]);
+                dns(args[1]);
                 Console.WriteLine("Net Ckeck by DNS and HTTP , Please check the DNSlog");
                 Console.WriteLine();
             }
@@ -94,7 +95,7 @@ namespace SharpNetCheck
                 //定义webClient对象
                 WebClient webClient = new WebClient();
 
-                url = "http://" + url + "/";
+                url = "http://" + url;
 
                 //向服务器发送POST数据
                 byte[] responseArray = webClient.UploadValues(url, postValues);
