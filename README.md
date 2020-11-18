@@ -53,7 +53,11 @@ if __name__ == '__main__':
 
 然后运行 SharpNetCheck.exe
 
-`SharpNetCheck.exe -http -host x.x.x.x:38989/register`
+```
+>SharpNetCheck.exe -http 1x.x.x.x2:38989/register
+
+Net Ckeck by HTTP , Please check the DNSlog
+```
 
 服务器就可以接收到post的内容
 
