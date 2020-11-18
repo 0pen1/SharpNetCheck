@@ -11,3 +11,21 @@ Usage: SharpNetCheck -dns -host ceye.io
        SharpNetCheck -http -host/ip ceye.io
        SharpNetCheck -all -host ceye.io
 ```
+
+
+## Example
+
+
+`SharpNetCheck -all -host xxx.ceye.io`
+
+#### HTTP Requests
+
+```
+Method: Post
+Data: host=DESKTOP-KUMLA9N&ip1=172.16.242.133
+```
+
+#### DNS Query Name
+```
+172.16.242.133-DESKTOP-KUMLA9N.xxx.ceye.io
+```
